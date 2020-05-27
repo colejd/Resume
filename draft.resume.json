@@ -1,0 +1,268 @@
+{
+  "name": "Jonathan Cole",
+  "meta": {
+    "format": "FRESH@0.6.0",
+    "version": "0.1.0"
+  },
+  "info": {
+    "label": "Senior Developer",
+    "brief": "A brief description of yourself as a candidate that appears in some résumé themes. You may use **Markdown** and/or <strong>HTML</strong> formatting here including [links](https://en.wikipedia.org/wiki/Special:Random) or stick to plain text.",
+    "image": ""
+  },
+  "contact": {
+    "website": "https://jons.website",
+    "phone": "207-949-4265",
+    "email": "jon@jons.website",
+    "other": []
+  },
+  "location": {
+    "address": "208 Morrison Ave. Apt. 1",
+    "city": "Somerville",
+    "region": "MA",
+    "code": "02144",
+    "country": "US"
+  },
+  "social": [
+    {
+      "label": "",
+      "network": "GitHub",
+      "user": "colejd",
+      "url": "https://github.com/colejd"
+    }
+  ],
+  "employment": {
+    "summary": "Optional overall employment summary. Not used in most themes.",
+    "history": [
+      {
+        "employer": "Rightpoint (formerly Raizlabs)",
+        "url": "https://www.rightpoint.com",
+        "position": "Senior Software Developer, Software Developer",
+        "summary": "Principally works to build world-class iOS apps in a fast-paced team environment",
+        "start": "2018-01",
+        "keywords": [
+          "iOS",
+          "Swift",
+          "Metal",
+          "ARKit",
+          "OpenCV",
+          "AR",
+          "Augmented Reality",
+          "VR",
+          "Virtual Reality"
+        ],
+        "highlights": [
+          "Responsible for architecture",
+          "Go-to for difficult experimental / trailblazing projects requiring an investigative approach; these ranged from occupancy grid vectorizers forcleaning robots to real-time movement detectors on Android",
+          "Pinch hitter and primary consultant for augmented reality projects"
+        ]
+      },
+      {
+        "employer": "Virtual Environment and Multimodal Interaction Laboratory",
+        "url": "https://umaine.edu/vemi",
+        "position": "VR / AR Engineer",
+        "summary": "Worked in close collaboration with researchers to develop and prototype several VR simulations using Unity3D; responsible for code anddesign in solo and team projects",
+        "start": "2011-09",
+        "end": "2018-01",
+        "keywords": [
+          "ARKit",
+          "OpenCV",
+          "AR",
+          "Augmented Reality",
+          "VR",
+          "Virtual Reality",
+          "C++",
+          "C#"
+        ],
+        "highlights": [
+          "Provided leadership in lab environment to push into new territories with self-directed and wide-ranging projects, from the development ofa custom-built wearable AR platform to the usage of VR to prototype AR techniques for enhancing human spatial perception",
+          "Mentored for more than 30 students in programming and design",
+          "Integrated VR technologies with Unity3D before official support, often involving hardware hacking or creating native plugins",
+          "Developed VR experiences for multiple human interface platforms, including the HTC Vive, Oculus Rift, Leap Motion, Microsoft Kinect, andoptical marker tracking systems by Phasespace and WorldViz",
+          "Created a full-stack implementation of the W3C Web Annotation Model for Dartmouth’s [Semantic Annotation Tool](http://mediaecology.dartmouth.edu/sat/) as part of the [Media Ecology Project](https://film-media.dartmouth.edu/tags/media-ecology-project)",
+          "Created native and Unity3D-based iOS apps for AR and data visualization contexts"
+        ]
+      },
+      {
+        "employer": "Maine Discovery Museum",
+        "url": "https://www.mainediscoverymuseum.org/",
+        "position": "Experience Designer (Contract)",
+        "summary": "Worked in collaboration with the museum to create interactive exhibits for children",
+        "start": "2016",
+        "end": "2017",
+        "keywords": [
+          "Museum",
+          "Installation",
+          "Interactive",
+          "Display",
+          "Leap Motion",
+          "Augmented Reality",
+          "AR"
+        ],
+        "highlights": [
+          "*Sea What Grows*: Created an iOS-based kiosk as part of a wider aquaculture exhibit to teach children about the ocean",
+          "*The X-Ray Hand*: Developed interactive exhibit that uses Leap Motion to show an x-ray visualization of a visitor’s hand"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Kino",
+      "category": "FOSS",
+      "url": "http://project-page.org",
+      "repo": "https://project-repo.com",
+      "media": [],
+      "role": "Creator",
+      "summary": "Master's Thesis",
+      "description": "Created a software and hardware platform to empower researchers to rapidly design computer visione xperiments for wearable AR headsets without needing to worry about threading, camera synchronization, or OS details. An example plugin was developed for real-time object recognition via machine learning.",
+      "highlights": [
+        "",
+        "",
+        ""
+      ],
+      "keywords": [
+        "OpenCV",
+        "Research",
+        "Thesis",
+        "Augmented Reality",
+        "AR",
+        "Custom",
+        "C++"
+      ]
+    },
+    {
+      "title": "Semantic Annotation Tool",
+      "category": "FOSS",
+      "url": "https://mediaecology.dartmouth.edu/sat/",
+      "repo": "https://github.com/colejd/Waldorf",
+      "media": [],
+      "role": "Creator",
+      "summary": "",
+      "description": "Created the frontend and backend implementations of the W3C Web Annotation Model for Dartmouth’s Media Ecology Project. Waldorf (the frontend) comprises an embeddable video player which allows users to create and edit rich annotations for web videos, while Statler (the backend) is a RESTful Rails backend that manages these annotations. The purpose of this system was to provide researchers with an interface for automatic tagging of videos via computer vision techniques.",
+      "highlights": [
+        "Project Highlight #1",
+        "Project Highlight #2",
+        "Project Highlight #3"
+      ],
+      "keywords": [
+        "W3C",
+        "Rails",
+        "Ruby",
+        "JS",
+        "Javascript",
+        "REST",
+        "Frontend",
+        "Backend"
+      ]
+    },
+    {
+      "title": "Liquid Math",
+      "category": "App",
+      "url": "https://apps.apple.com/us/app/liquid-math/id1331320224",
+      "repo": "",
+      "media": [],
+      "role": "Creator",
+      "summary": "Conceived, designed, implemented, and created an interactive, Metal-powered Reaction-Diffusion simulator for iOS and macOS",
+      "description": "Description",
+      "highlights": [
+        "Project Highlight #1",
+        "Project Highlight #2",
+        "Project Highlight #3"
+      ],
+      "keywords": [
+        "iOS",
+        "macOS",
+        "Swift",
+        "Objective-C",
+        "Metal",
+        "Creative Coding"
+      ]
+    }
+  ],
+  "education": {
+    "summary": "Optional overall education summary. Not used in most themes.",
+    "level": "degree",
+    "degree": "MS",
+    "history": [
+      {
+        "institution": "University of Maine",
+        "title": "M.S., Spatial Information Science and Engineering",
+        "url": "https://spatial.umaine.edu",
+        "start": "",
+        "end": "2017-12",
+        "grade": "3.7",
+        "summary": "",
+        "curriculum": [
+          ""
+        ]
+      },
+      {
+        "institution": "University of Maine",
+        "title": "B.S., Computer Science",
+        "url": "https://umaine.edu/cs/",
+        "start": "",
+        "end": "2015-05",
+        "grade": "",
+        "summary": "",
+        "curriculum": [
+          ""
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "sets": [
+      {
+        "name": "iOS Development",
+        "level": "",
+        "skills": [
+          "Swift",
+          "Objective-C",
+          "Metal",
+          "ARKit",
+          "SceneKit"
+        ]
+      },
+      {
+        "name": "AR / VR",
+        "level": "",
+        "skills": [
+          "OpenCV",
+          "ARKit",
+          "Unity3D",
+          "Homebrew",
+          "Machine Learning",
+          "C++",
+          "C#"
+        ]
+      }
+    ],
+    "list": []
+  },
+  "languages": [
+    {
+      "language": "Swift",
+      "level": ""
+    },
+    {
+      "language": "Objective-C",
+      "level": ""
+    },
+    {
+      "language": "C#",
+      "level": ""
+    },
+    {
+      "language": "Python",
+      "level": ""
+    },
+    {
+      "language": "C++",
+      "level": ""
+    },
+    {
+      "language": "Java",
+      "level": ""
+    }
+  ]
+}

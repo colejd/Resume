@@ -1,0 +1,44 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Jon's Resume",
+  "main": "index.js",
+  "dependencies": {
+    "jsonresume-theme-stackoverflow": "^1.4.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0"
+  },
+  "watch": {
+    "build-html": {
+      "patterns": "*.json",
+      "ignore": "./build/"
+    }
+  },
+  "scripts": {
+    "test": "hackmyresume validate draft.resume.json",
+    "build-all": "hackmyresume build draft.resume.json TO build/resume.all -t node_modules/jsonresume-theme-stackoverflow",
+    "build-pdf": "hackmyresume build draft.resume.json TO build/resume.pdf -t node_modules/jsonresume-theme-stackoverflow",
+    "build-html": "hackmyresume build draft.resume.json TO build/resume.html -t node_modules/jsonresume-theme-stackoverflow",
+    "develop": "run-p _watch:json _watch:html",
+    "//_watch:json": "Watch json and build html if it changes",
+    "_watch:json": "npm-watch build-html",
+    "//_watch:html": "Watch html and preview in browser",
+    "_watch:html": "browser-sync start --watch --server --files ./build --index ./build/resume.html --no-notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colejd/resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "Jonathan Cole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colejd/resume/issues"
+  },
+  "homepage": "https://github.com/colejd/resume#readme"
+}
