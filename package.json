@@ -3,26 +3,34 @@
   "version": "1.0.0",
   "description": "Jon's Resume",
   "main": "index.js",
-  "dependencies": {
-    "jsonresume-theme-stackoverflow": "^1.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "hackmyresume": "^1.9.0-beta",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0"
   },
   "watch": {
     "build-html": {
-      "patterns": "*.json",
+      "patterns": ["*"],
+      "extensions": "*",
       "ignore": "./build/"
     }
   },
+  "hackmyresume_alias": "node_modules/.bin/hackmyresume",
+  "resume_file": "draft.resume.json",
+  "resume_output_directory": "build/",
+  "theme": "themes/jsonresume-theme-stackoverflow",
   "scripts": {
-    "test": "hackmyresume validate draft.resume.json",
-    "build-all": "hackmyresume build draft.resume.json TO build/resume.all -t node_modules/jsonresume-theme-stackoverflow",
-    "build-pdf": "hackmyresume build draft.resume.json TO build/resume.pdf -t node_modules/jsonresume-theme-stackoverflow",
-    "build-html": "hackmyresume build draft.resume.json TO build/resume.html -t node_modules/jsonresume-theme-stackoverflow",
+    "//Note_Public": "Public commands follow =============================================================",
+    "initialize": "cd $npm_package_theme; npm install",
+    "test": "$npm_package_hackmyresume_alias validate $npm_package_resume_file",
+    "build-all": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.all -t $npm_package_theme -o options.json",
+    "build-pdf": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.pdf -t $npm_package_theme -o options.json",
+    "build-html": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.html -t $npm_package_theme -o options.json",
+    "//develop": "Build and serve html version, rebuild upon changes",
     "develop": "run-p _watch:json _watch:html",
+    "//Note_Private": "Private commands follow ===========================================================",
     "//_watch:json": "Watch json and build html if it changes",
     "_watch:json": "npm-watch build-html",
     "//_watch:html": "Watch html and preview in browser",
