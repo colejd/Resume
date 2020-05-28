@@ -46,6 +46,25 @@ jobs:
         npm run build-html
         npm run build-pdf
         
+    - name: Checkout website repo
+      uses: actions/checkout@v2
+      with:
+        repository: colejd/colejd.github.io
+        path: website
+        
+    - name: Copy resume files into website repo
+      run: |
+        cp $GITHUB_WORKSPACE/build/resume.pdf website/resume.pdf
+        cp $GITHUB_WORKSPACE/build/resume.html website/resume/index.html
+                
+    - name: Commit files
+      run: |
+        cd website
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Update auto-generated resume files" -a
+        git push https://$TOKEN@github.com/colejd/colejd.github.io.git
+
 #     # Runs a single command using the runners shell
 #     - name: Additional initialization
 #       run: echo 'TODO: Push assets to website'
