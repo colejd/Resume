@@ -39,6 +39,7 @@ jobs:
       run: |
         npm ci # Better than npm install - https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions
         npm run initialize
+        sudo apt-get install xvfb libfontconfig wkhtmltopdf # Install wkhtmltopdf
 
     # Runs a set of commands using the runners shell
     - name: Build resume
@@ -54,7 +55,7 @@ jobs:
         
     - name: Copy resume files into website repo
       run: |
-        cd $GITHUB_WORKSPACE
+        cd $GITHUB_WORKSPACE/build
         ls -la
         cp $GITHUB_WORKSPACE/build/resume.pdf website/resume.pdf
         cp $GITHUB_WORKSPACE/build/resume.html website/resume/index.html
