@@ -8,11 +8,14 @@
     "browser-sync": "^2.26.7",
     "hackmyresume": "^1.9.0-beta",
     "npm-run-all": "^4.1.5",
-    "npm-watch": "^0.6.0"
+    "npm-watch": "^0.6.0",
+    "puppeteer-cli": "^1.5.1"
   },
   "watch": {
     "build-html": {
-      "patterns": ["*"],
+      "patterns": [
+        "*"
+      ],
       "extensions": "*",
       "ignore": "./build/"
     }
@@ -26,11 +29,12 @@
     "initialize": "cd $npm_package_theme; npm install",
     "test": "$npm_package_hackmyresume_alias validate $npm_package_resume_file",
     "build-all": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.all -t $npm_package_theme -o options.json",
-    "build-pdf": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.pdf -t $npm_package_theme -o options.json",
+    "build-pdf": "run-s build-html _puppeteer",
     "build-html": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.html -t $npm_package_theme -o options.json",
     "//develop": "Build and serve html version, rebuild upon changes",
     "develop": "run-p _watch:json _watch:html",
     "//Note_Private": "Private commands follow ===========================================================",
+    "_puppeteer": "puppeteer --margin-top 0 --margin-right 0 --margin-bottom 0 --margin-left 0 --format Letter print $npm_package_resume_output_directory/resume.html $npm_package_resume_output_directory/resume.pdf",
     "//_watch:json": "Watch json and build html if it changes",
     "_watch:json": "npm-watch build-html",
     "//_watch:html": "Watch html and preview in browser",
