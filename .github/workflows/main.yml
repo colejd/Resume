@@ -48,4 +48,4 @@ jobs:
         
     # Runs a single command using the runners shell
     - name: Additional initialization
-      run: echo "TODO: Push assets to website"
+      run: echo TODO: Push assets to website
