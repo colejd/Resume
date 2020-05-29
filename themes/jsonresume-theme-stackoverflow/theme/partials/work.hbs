@@ -9,10 +9,8 @@
     <section class="work-item">
 			{{#if company}}
 
-      {{#if summary}}
-        <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
-        <label for="work-item-{{@index}}"></label>
-      {{/if}}
+      <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
+      <label for="work-item-{{@index}}"></label>
 
 			<header class="clear">
 				{{#if position}}
@@ -86,14 +84,26 @@
     	{{/if}}
     	<div class="item" id="work-item">
         {{#if summary}}
-        <div class="summary">{{paragraphSplit summary}}</div>
-        {{/if}} 
+          <div class="summary">{{paragraphSplit summary}}</div>
+        {{/if}}
+        {{#if bulletedSummary}}
+          {{#bulletedSummary}}
+          <div class="summary">{{paragraphSplit text}}</div>
+          {{#if items.length}}
+            <ul class="bulleted-summary">
+              {{#each items}}
+                <li><span class="bulleted-summary-emoji">{{ this.emoji }}</span> {{ this.text }}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+          {{/bulletedSummary}}
+        {{/if}}
         {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-            <li>{{paragraphSplit .}}</li>
-          {{/each}}
-        </ul>
+          <ul class="highlights">
+            {{#each highlights}}
+              <li>{{paragraphSplit .}}</li>
+            {{/each}}
+          </ul>
         {{/if}}
     	</div>
     </section>

@@ -415,6 +415,30 @@ section .location {
   font-size: 1.1em;
 }
 
+ul.bulleted-summary {
+  list-style: none;
+}
+ul.bulleted-summary > li {
+  list-style-type: none;
+  padding-top: 0.2em;
+  margin-left: 0em;
+}
+.bulleted-summary .bulleted-summary-emoji {
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 1;
+  margin-right: 0.5em;
+}
+
+/* Margin override */
+.summary + .bulleted-summary {
+  margin-top: 0.5em;
+}
+/* Margin override */
+.bulleted-summary + .highlights {
+  margin-top: 1em;
+}
+
 /* Social Media Brand Colors */
 
 [class*='fa-'] {
