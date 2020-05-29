@@ -14,19 +14,18 @@ npm install # Install local dependencies
 npm run initialize # Basically runs `npm install` in theme directory
 ```
 
-You'll also need to make sure to install [`wkhtmltopdf`](https://wkhtmltopdf.org/) if you want PDF output.
-
 ## Usage
 
 Make your edits to `draft.resume.json`. You can then run the following in your terminal:
 
 * `npm run develop` - generates an HTML render of the website and serves it in a web browser. Changes to the json are reflected live in the browser.
-* `npm run build-all` - Builds the resume to every output format supported by HackMyResume. Files are stored in `./build/`.
 * `npm run build-pdf` - Builds just the PDF version into `./build/resume.pdf`.
 * `npm run build-html` - Builds just the HTML version into `./build/resume.html`.
 * `npm run test` - Test `draft.resume.json` for correctness.
 
 You can also edit the `theme` key in package.json to change to another theme if you pull one. This can point either to a local theme or one you've installed with NPM. If you pull a theme locally, make sure to run `npm install` in its own directory, or hackmyresume will give you a pretty cryptic error. `npm run initialize` automates this step for the theme specified by the `theme` key.
+
+PDF generation is done with [Puppeteer](https://github.com/puppeteer/puppeteer). You can configure it in [buildpdf.js](/buildpdf.js) if you want more control over the look of the PDF.
 
 ## Troubleshooting
 

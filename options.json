@@ -1,9 +1,0 @@
-{ 
-  "sectionTitles": {
-    "employment": "Work"
-  },
-  
-  "wkhtmltopdf": {
-    "margin-top": "20mm"
-  }
-}
