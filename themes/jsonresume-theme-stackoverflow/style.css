@@ -599,7 +599,6 @@ section .location {
 ****************/
 
 /* Make tags fill full width on mobile only */
-/* 
 @media screen and (max-width: 601px) {
   #skills .item {
     width: 100%;
@@ -608,8 +607,7 @@ section .location {
   #skills .item .keywords {
     width: 100%;
   }
-} 
-*/
+}
 
 /****************
 *		TABLET
