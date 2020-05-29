@@ -59,12 +59,11 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/website
         
-    - uses: fregante/setup-git-token@v1
-      with:
-        token: ${{ secrets.TOKEN }}
-        
     - name: Commit files
       run: |
+        echo ${{ secrets.TOKEN }}
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
         git push
                 
