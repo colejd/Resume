@@ -39,7 +39,6 @@ jobs:
       run: |
         npm ci # Better than npm install - https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions
         npm run initialize
-        sudo apt-get install xvfb libfontconfig wkhtmltopdf # Install wkhtmltopdf
 
     # Runs a set of commands using the runners shell
     - name: Build resume
