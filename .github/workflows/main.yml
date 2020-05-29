@@ -54,13 +54,10 @@ jobs:
       run: |
         cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/resume.pdf
         cp $GITHUB_WORKSPACE/build/resume.html $GITHUB_WORKSPACE/website/resume/index.html
-    
-    - name: Commit files
-      run: |
-        cd $GITHUB_WORKSPACE/website
         
     - name: Commit files
       run: |
+        cd $GITHUB_WORKSPACE/website
         echo ${{ secrets.TOKEN }}
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Action"
