@@ -2,12 +2,10 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run. Triggers the workflow on push 
+# only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -56,12 +54,12 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/build
         ls -la
-        cp $GITHUB_WORKSPACE/build/resume.pdf website/resume.pdf
-        cp $GITHUB_WORKSPACE/build/resume.html website/resume/index.html
+        cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/resume.pdf
+        cp $GITHUB_WORKSPACE/build/resume.html $GITHUB_WORKSPACE/website/resume/index.html
                 
     - name: Commit files
       run: |
-        cd website
+        cd $GITHUB_WORKSPACE/website
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
