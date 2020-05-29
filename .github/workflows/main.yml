@@ -65,8 +65,8 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}
-        repository: colejd.github.io
+        github_token: ${{ GITHUB_TOKEN }}
+        repository: colejd/colejd.github.io
 
 #     # Runs a single command using the runners shell
 #     - name: Additional initialization
