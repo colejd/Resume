@@ -49,6 +49,7 @@ jobs:
       with:
         repository: colejd/colejd.github.io
         path: website
+        token: ${{ secrets.TOKEN }}
         
     - name: Copy resume files into website repo
       run: |
@@ -57,10 +58,6 @@ jobs:
         
     - name: Commit files
       run: |
-        cd $GITHUB_WORKSPACE/website
-        echo ${{ secrets.TOKEN }}
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
         git push
                 
