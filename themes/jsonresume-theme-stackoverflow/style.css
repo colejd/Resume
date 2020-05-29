@@ -417,6 +417,11 @@ section .location {
 
 /* Social Media Brand Colors */
 
+[class*='fa-'] {
+  /* Override brand colors */
+  color: #414141 !important;
+}
+
 .google-plus {
   color: #dd4b39;
 }
@@ -753,7 +758,7 @@ section .location {
   .stack-overflow::after {
     content: "";
   }
-  .fa.social {
+  [class*="fa-"].social {
     color: #828386;
   }
   ul {
