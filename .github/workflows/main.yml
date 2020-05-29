@@ -58,15 +58,17 @@ jobs:
     - name: Commit files
       run: |
         cd $GITHUB_WORKSPACE/website
-        git config --local user.email "action@github.com"
+        git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
+        git remote set-url origin https://colejd:$FULL_TOKEN@github.com/colejd/colejd.github.io.git
+        git push
         
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.FULL_TOKEN }}
-        repository: colejd/colejd.github.io
+#     - name: Push changes
+#       uses: ad-m/github-push-action@master
+#       with:
+#         github_token: ${{ secrets.FULL_TOKEN }}
+#         repository: colejd/colejd.github.io
 
 #     # Runs a single command using the runners shell
 #     - name: Additional initialization
