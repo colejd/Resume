@@ -61,7 +61,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
-        git remote set-url origin https://colejd:$FULL_TOKEN@github.com/colejd/colejd.github.io.git
+        git remote set-url origin https://colejd:${{secrets.TOKEN}}@github.com/colejd/colejd.github.io.git
         git push
         
 #     - name: Push changes
