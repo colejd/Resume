@@ -54,15 +54,31 @@ jobs:
       run: |
         cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/resume.pdf
         cp $GITHUB_WORKSPACE/build/resume.html $GITHUB_WORKSPACE/website/resume/index.html
-                
+    
     - name: Commit files
       run: |
         cd $GITHUB_WORKSPACE/website
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Action"
+        
+    - uses: fregante/setup-git-token@v1
+      with:
+        token: ${{ secrets.TOKEN }}
+        
+    - name: Commit files
+      run: |
+        # git config --local user.email "actions@github.com"
+        # git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
         git remote set-url origin https://colejd:${{secrets.TOKEN}}@github.com/colejd/colejd.github.io.git
         git push
+                
+#     - name: Commit files
+#       run: |
+#         cd $GITHUB_WORKSPACE/website
+#         git config --local user.email "actions@github.com"
+#         git config --local user.name "GitHub Action"
+#         git commit -m "Update auto-generated resume files" -a
+#         git remote set-url origin https://colejd:${{secrets.TOKEN}}@github.com/colejd/colejd.github.io.git
+#         git push
         
 #     - name: Push changes
 #       uses: ad-m/github-push-action@master
