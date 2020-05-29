@@ -52,8 +52,6 @@ jobs:
         
     - name: Copy resume files into website repo
       run: |
-        cd $GITHUB_WORKSPACE/build
-        ls -la
         cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/resume.pdf
         cp $GITHUB_WORKSPACE/build/resume.html $GITHUB_WORKSPACE/website/resume/index.html
                 
@@ -63,7 +61,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Update auto-generated resume files" -a
-        git push https://$TOKEN@github.com/colejd/colejd.github.io.git
+        git remote set-url origin https://colejd:$TOKEN@github.com/colejd/colejd.github.io.git
+        git push
 
 #     # Runs a single command using the runners shell
 #     - name: Additional initialization
