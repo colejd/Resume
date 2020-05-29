@@ -33,7 +33,11 @@
 					<span class="endDate">- Current</span>
           {{/if}} --}}
           {{#if startDate}}
-          <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
+            {{#if dateFormat}}
+            <span class="startDate">{{smartDate startDate endDate dateFormat "-"}}</span>
+            {{else}}
+            <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
+            {{/if}}
           {{/if}}
 				</div>
         {{!-- {{#location}}
