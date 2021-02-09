@@ -77,8 +77,12 @@
         "text": "Responsible for architecture and implementation on large, public-facing projects that:",
         "items": [
           {
-            "emoji": "🚏",
-            "text": "Help visually impaired people find bus stops with Bluetooth ranging"
+            "emoji": "🏬",
+            "text": "Help store owners manage their shelves with computer vision"
+          },
+          {
+            "emoji": "🤖",
+            "text": "Pilot large robots"
           },
           {
             "emoji": "🏥",
@@ -89,12 +93,8 @@
             "text": "Power the smart lighting in your home"
           },
           {
-            "emoji": "🏬",
-            "text": "Help store owners manage their shelves with computer vision"
-          },
-          {
-            "emoji": "🤖",
-            "text": "Pilot large robots"
+            "emoji": "🚏",
+            "text": "Help visually impaired people find bus stops with Bluetooth ranging"
           },
           {
             "emoji": "🗺️",
@@ -104,7 +104,7 @@
       },
       "highlights": [
         "Go-to for difficult experimental / trailblazing projects requiring an investigative approach",
-        "Pinch hitter and frequent consultant for augmented reality projects",
+        "Pinch hitter and frequent consultant for computer vision and augmented reality projects",
         "Worked extensively with Bluetooth, BLE, and Internet of Things devices"
       ]
     },
@@ -142,7 +142,7 @@
       "summary": "Worked in collaboration with the museum to create interactive exhibits for children.",
       "highlights": [
         "*Sea What Grows*: Created an iOS-based kiosk as part of a wider aquaculture exhibit to teach children about the ocean",
-        "*The X-Ray Hand*: Developed interactive exhibit that uses Leap Motion to show an x-ray visualization of a visitor’s hand"
+        "*The X-Ray Hand*: Developed interactive exhibit that uses augmented reality to show a live x-ray visualization of the bones in a visitor’s hand"
       ]
     }
   ],
@@ -170,7 +170,7 @@
       "url": "https://github.com/colejd/Kino",
       "repo": "https://github.com/colejd/Kino",
       "role": "Creator",
-      "summary": "Master's thesis. Created a software and hardware platform to empower researchers to rapidly design computer vision experiments for wearable AR headsets without needing to worry about threading, camera synchronization, or OS details. An example plugin was developed for real-time object recognition via machine learning.",
+      "summary": "Master's thesis. Created a custom AR headset and accompanying software to empower researchers to rapidly design computer vision experiments for wearable AR headsets without needing to worry about threading, camera synchronization, or OS details. An example plugin was developed for real-time object recognition via machine learning.",
       "description": "",
       "keywords": [
         "OpenCV",
