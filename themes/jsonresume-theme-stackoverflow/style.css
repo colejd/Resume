@@ -362,7 +362,7 @@ section .location {
 }
 
 .section header .date {
-  display: block;
+  /* display: block; */
   font-size: 1rem;
   /* padding: 0.1em 0; */
   color: #606d76;
@@ -609,6 +609,18 @@ ul.bulleted-summary > li {
   margin-bottom: 0.5rem;
 }
 
+.work-item header {
+  position: relative;
+}
+
+.work-metadata * {
+  display: inline;
+}
+
+.work-metadata .location {
+  margin-left: 0.5em;
+}
+
 /******************
 *	HELPER CLASSES
 ******************/
@@ -649,7 +661,7 @@ ul.bulleted-summary > li {
     margin: 0 auto;
   }
   .section header .date {
-    float: right;
+    /* float: right; */
     font-weight: 600;
     color: #000;
   }
@@ -718,7 +730,7 @@ ul.bulleted-summary > li {
   }
   .header-left {
     float: left;
-    width: 70%;
+    width: 90%;
     word-break: normal;
   }
   .section header .date {
@@ -737,6 +749,16 @@ ul.bulleted-summary > li {
   
   #skills .item .keywords {
     width: 15em;
+  }
+
+  .work-metadata {
+    position: absolute;
+    top: 0.4em;
+    right: 0;
+  }
+
+  .work-metadata * {
+    /* display: block; */
   }
 }
 
