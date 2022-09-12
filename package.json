@@ -20,15 +20,11 @@
       "ignore": "./build/"
     }
   },
-  "hackmyresume_alias": "node_modules/.bin/hackmyresume",
-  "resume_file": "draft.resume.json",
-  "resume_output_directory": "build/",
-  "theme": "themes/jsonresume-theme-stackoverflow",
   "scripts": {
     "// Note_Public": "Public commands follow =============================================================",
-    "initialize": "cd $npm_package_theme; npm install",
-    "test": "$npm_package_hackmyresume_alias validate $npm_package_resume_file",
-    "build-html": "$npm_package_hackmyresume_alias build $npm_package_resume_file TO $npm_package_resume_output_directory/resume.html -t $npm_package_theme",
+    "initialize": "cd themes/jsonresume-theme-stackoverflow; npm install",
+    "test": "node_modules/.bin/hackmyresume validate draft.resume.json",
+    "build-html": "node_modules/.bin/hackmyresume build draft.resume.json TO build/resume.html -t themes/jsonresume-theme-stackoverflow",
     "build-pdf": "run-s build-html _puppeteer",
     "// About develop": "Build and serve html version, rebuild upon changes",
     "develop": "run-p _watch:json _watch:html",
