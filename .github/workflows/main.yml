@@ -53,7 +53,7 @@ jobs:
         
     - name: Copy resume files into website repo
       run: |
-        cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/static/resume/resume.pdf
+        cp $GITHUB_WORKSPACE/build/resume.pdf $GITHUB_WORKSPACE/website/static/resume.pdf
         cp $GITHUB_WORKSPACE/build/resume.html $GITHUB_WORKSPACE/website/static/resume/index.html
         
     - name: Commit files
