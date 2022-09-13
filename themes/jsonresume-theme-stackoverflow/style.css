@@ -752,7 +752,7 @@ ul.bulleted-summary > li {
   }
 
   .work-metadata {
-    position: absolute;
+    /* position: absolute; */ /* Anchor on right side */
     top: 0.4em;
     right: 0;
   }
