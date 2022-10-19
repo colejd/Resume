@@ -6,109 +6,130 @@
 
   <section id="work">
     {{#each resume.work}}
-    <section class="work-item">
-			{{#if company}}
 
-      <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
-      <label for="work-item-{{@index}}"></label>
-
-			<header class="clear">
-				{{#if position}}
-				<div class="position">{{position}}</div>
-				{{/if}}
-        {{#if website}}
-        <span class="company website">
-          <a target="_blank" href="{{website}}">{{company}}</a>
-        </span>
-        {{/if}}
-        <div class="work-metadata">
-          <div class="date">
-            {{!-- {{#if startDate}}
-            <span class="startDate">{{MY startDate}}</span> 
-            {{/if}}
-            {{#if endDate}}
-            <span class="endDate">- {{MY endDate}}</span> 
+    <div class="work-entry">
+      <div class="work-date desktop-only">
+        <div class="date">
+          {{#if startDate}}
+            {{#if dateFormat}}
+            <span class="startDate">{{smartDate startDate endDate dateFormat "-"}}</span>
             {{else}}
-            <span class="endDate">- Current</span>
-            {{/if}} --}}
-            {{#if startDate}}
-              {{#if dateFormat}}
-              <span class="startDate">{{smartDate startDate endDate dateFormat "-"}}</span>
-              {{else}}
-              <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
-              {{/if}}
+            <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
             {{/if}}
-          </div>
-          {{#location}}
-          <span class="location">
-            <span class="fas fa-map-marker-alt"></span> 
-            {{#if city}}
-            <span class="city">{{city}},</span>
-            {{/if}} 
-            {{#if countryCode}}
-            <span class="countryCode">({{countryCode}})</span> 
-            {{/if}} 
-            {{#if region}}
-            <span class="region">{{region}}</span> 
-            {{/if}}
-          </span>
-          {{/location}}
+          {{/if}}
         </div>
-			</header>
-			{{/if}}
+      </div>
 
-      {{!-- {{#if website}}
-      <span class="website">
-        <a target="_blank" href="{{website}}">{{company}}</a>
-      </span>
-      {{/if}} --}}
-			
-			{{!-- {{#location}}
-			<span class="location">
-				<span class="fas fa-map-marker-alt"></span> 
-				{{#if city}}
-				<span class="city">{{city}},</span>
-				{{/if}} 
-				{{#if countryCode}}
-				<span class="countryCode">({{countryCode}})</span> 
-				{{/if}} 
-				{{#if region}}
-				<span class="region">{{region}}</span> 
-				{{/if}}
-			</span>
-	    {{/location}}  --}}
-			{{#if keywords.length}}
-    	<ul class="keywords">
-      	{{#each keywords}}
-      	<li>{{.}}</li>
-      	{{/each}}
-    	</ul>
-    	{{/if}}
-    	<div class="item" id="work-item">
-        {{#if summary}}
-          <div class="summary">{{paragraphSplit summary}}</div>
+      <section class="work-item" style="width: 100%">
+        {{#if company}}
+
+        {{!-- <input id="work-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
+        <label for="work-item-{{@index}}"></label> --}}
+
+        <header class="clear">
+
+          <div class="work-headerline">
+            
+            <div class="date mobile-only">
+              {{#if startDate}}
+                {{#if dateFormat}}
+                <span class="startDate">{{smartDate startDate endDate dateFormat "-"}}</span>
+                {{else}}
+                <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
+                {{/if}}
+              {{/if}}
+            </div>
+
+            <div class="work-headerline-primary">
+              <div style="">
+                {{#if website}}
+                <span class="company website">
+                  <a target="_blank" href="{{website}}">{{company}}</a>
+                </span>
+                {{/if}}
+
+                {{#location}}
+                <span class="location">
+                  <span class="fas fa-map-marker-alt"></span> 
+                  {{#if city}}
+                  <span class="city">{{city}},</span>
+                  {{/if}} 
+                  {{#if countryCode}}
+                  <span class="countryCode">({{countryCode}})</span> 
+                  {{/if}} 
+                  {{#if region}}
+                  <span class="region">{{region}}</span> 
+                  {{/if}}
+                </span>
+                {{/location}}
+                
+              </div>
+              {{#if position}}
+              <div class="position"><p>{{position}}</p></div>
+              {{/if}}
+              {{#if positions}}
+              {{#each positions}}
+                  <div class="positions-container">
+                    <div class="position-title"><p>{{title}}</p></div>
+                    <div class="position-secondary-text"><p>{{secondaryText}}</p></div>
+                  </div>
+              {{/each}}
+              {{/if}}
+            </div>
+
+            {{!-- TODO: --}}
+            {{!-- <div class="work-headerline-secondary">
+              <div class="date">
+                {{#if startDate}}
+                  {{#if dateFormat}}
+                  <span class="startDate">{{smartDate startDate endDate dateFormat "-"}}</span>
+                  {{else}}
+                  <span class="startDate">{{smartDate startDate endDate "MMM YYYY" "-"}}</span>
+                  {{/if}}
+                {{/if}}
+              </div>
+            </div> --}}
+
+          </div>
+        </header>
         {{/if}}
-        {{#if bulletedSummary}}
-          {{#bulletedSummary}}
-          <div class="summary">{{paragraphSplit text}}</div>
-          {{#if items.length}}
-            <ul class="bulleted-summary">
-              {{#each items}}
-                <li><span class="bulleted-summary-emoji">{{ this.emoji }}</span> {{ this.text }}</li>
+
+        {{#if keywords.length}}
+        <ul class="keywords">
+          {{#each keywords}}
+          <li>{{.}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+
+        <div class="item" id="work-item">
+          {{#if summary}}
+            <div class="summary">{{paragraphSplit summary}}</div>
+          {{/if}}
+          {{#if bulletedSummary}}
+            {{#bulletedSummary}}
+            <div class="summary">{{paragraphSplit text}}</div>
+            {{#if items.length}}
+              <ul class="bulleted-summary">
+                {{#each items}}
+                  <li><span class="bulleted-summary-emoji">{{ this.emoji }}</span> {{ this.text }}</li>
+                {{/each}}
+              </ul>
+            {{/if}}
+            {{/bulletedSummary}}
+          {{/if}}
+          {{#if highlights.length}}
+            <ul class="highlights">
+              {{#each highlights}}
+                <li>{{paragraphSplit .}}</li>
               {{/each}}
             </ul>
           {{/if}}
-          {{/bulletedSummary}}
-        {{/if}}
-        {{#if highlights.length}}
-          <ul class="highlights">
-            {{#each highlights}}
-              <li>{{paragraphSplit .}}</li>
-            {{/each}}
-          </ul>
-        {{/if}}
-    	</div>
-    </section>
+        </div>
+        
+      </section>
+    </div>
+
     {{/each}}
   </section>
 </section>

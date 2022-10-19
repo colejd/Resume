@@ -6,10 +6,10 @@
   <section id="projects">
     {{#each resume.projects}}
     <section class="project-item">
-      {{#if summary}}
+      {{!-- {{#if summary}}
         <input id="project-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
         <label for="project-item-{{@index}}"></label>
-      {{/if}}
+      {{/if}} --}}
 
       {{#if name}}
       <header class="clear">
@@ -17,8 +17,12 @@
         <div class="position">{{name}}</div>
         {{/if}}
         {{#if url}}
-        <span class="company website">
+        <span class="website">
+          {{#if urlLabel}}
+          <a target="_blank" href="{{url}}">{{urlLabel}}</a>
+          {{else}}
           <a target="_blank" href="{{url}}">{{url}}</a>
+          {{/if}}
         </span>
         {{/if}}
         {{#if summary}}

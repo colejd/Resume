@@ -135,10 +135,24 @@ table {
 *	COMMONS
 ****************/
 
+:root {
+  --text-size-primary: brown;
+  --text-size-body: 13px;
+  --text-size-h1: 2rem;
+  --text-size-h2: 1.67rem;
+  --text-size-h3: 1.27rem;
+  --text-size-header-name: 2.8rem;
+  --text-size-header-label: 1.47rem;
+  --text-section-title: 0.9rem;
+  --text-section-header: 1.38rem;
+
+}
+
+
 body,
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 13px;
+  font-size: var(--text-size-body);
   color: #40484f;
   font-weight: 400;
   letter-spacing: 0;
@@ -168,15 +182,15 @@ li {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--text-size-h1);
 }
 
 h2 {
-  font-size: 1.67rem;
+  font-size: var(--text-size-h2);
 }
 
 h3 {
-  font-size: 1.27rem;
+  font-size: var(--text-size-h3);
 }
 
 em {
@@ -242,15 +256,15 @@ section .location {
   margin-right: 1.2em;
 }
 
-#header h1.name {
-  font-size: 2.8rem;
+#header .name {
+  font-size: var(--text-size-header-name);
   font-weight: 100;
   line-height: 100%;
 }
 
-#header h2.label {
+#header .label {
   color: #202931;
-  font-size: 1.47rem;
+  font-size: var(--text-size-header-label);
   font-weight: 300;
 }
 
@@ -278,7 +292,7 @@ section .location {
   text-transform: uppercase;
   font-weight: 600;
   border: none;
-  font-size: 0.9rem;
+  font-size: var(--text-section-title);
 }
 
 .section > header {
@@ -306,7 +320,13 @@ section .location {
 }
 
 .section > section > header {
-  font-size: 1.38rem;
+  font-size: var(--text-section-header);
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > .work-entry > header {
+  font-size:var(--text-section-header);
   position: relative;
   margin-top: 0.7em;
 }
@@ -315,7 +335,20 @@ section .location {
   margin: 0;
 }
 
+.section > section > .work-entry > header:first-of-type {
+  margin: 0;
+}
+
 .section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.section > section > .work-entry > header .space-left {
   position: absolute;
   left: -1.56rem;
   top: 5px;
@@ -346,7 +379,6 @@ section .location {
   font-size: 1.2em;
 }
 
-.company::before,
 .institution::before,
 .organization::before,
 .awarder::before {
@@ -365,8 +397,7 @@ section .location {
   /* display: block; */
   font-size: 1rem;
   /* padding: 0.1em 0; */
-  color: #606d76;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 #resume > .section > header {
@@ -604,7 +635,17 @@ ul.bulleted-summary > li {
   margin-bottom: 1.0rem;
 }
 
+.section > section > .work-entry > section {
+  /* Spacing under each section */
+  margin-bottom: 1.0rem;
+}
+
 .section > section > section > header {
+  padding-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section > section > .work-entry > section > header {
   padding-top: 0.2rem;
   margin-bottom: 0.5rem;
 }
@@ -619,6 +660,121 @@ ul.bulleted-summary > li {
 
 .work-metadata .location {
   margin-left: 0.5em;
+}
+
+.work-headerline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.work-headerline-primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+.work-headerline-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.work-headerline-primary .location {
+  margin-left: 0.3em;
+
+  color: #606d76;
+  font-weight: initial;
+}
+
+.work-headerline-primary .location::before {
+  color: #606d76;
+  /* content: " - "; */
+}
+
+/* Full-width rules */
+@media screen and (min-width: 768px) {
+  .work-headerline-secondary {
+    padding-top: 0.2em;
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Mobile-width rules */
+@media screen and (max-width: 767px) {
+  .work-headerline {
+    flex-direction: column;
+  }
+
+  .work-headerline .date {
+    color: #606d76;
+  }
+
+  .work-headerline-secondary {
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .work-headerline .date {
+    font-size: 1.2em !important;
+    font-weight: 600;
+  }
+}
+
+.project-item .website {
+  margin-left: 0.25rem;
+}
+
+.positions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.positions-container .position-title {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.positions-container .position-secondary-text {
+  margin-left: 0.5em;
+}
+
+.work-entry {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-entry .work-date {
+  min-width: 9em;
+  width: 9em;
+  padding-top: 0.15em;
+  font-size: 1.2em;
+}
+
+.company.website {
+  font-size: 1.2em;
+}
+
+/* .work-item > .item {
+  width: 80%;
+  max-width: 80%;
+} */
+
+.project-item .summary {
+  padding-top: 0.2em;
 }
 
 /******************
@@ -662,8 +818,8 @@ ul.bulleted-summary > li {
   }
   .section header .date {
     /* float: right; */
-    font-weight: 600;
-    color: #000;
+    /* font-weight: 600; */
+    /* color: #000; */
   }
 
   #skills .item {
@@ -688,6 +844,10 @@ ul.bulleted-summary > li {
     margin: 2rem auto;
   }
   .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section > .work-entry > header .space-left {
     opacity: 1;
     cursor: pointer;
   }
@@ -722,7 +882,6 @@ ul.bulleted-summary > li {
     opacity: 1;
     transition: all 0.5s linear;
   }
-  .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
@@ -735,6 +894,7 @@ ul.bulleted-summary > li {
   }
   .section header .date {
     padding: 0.2em;
+    /* font-weight: 600; */
   }
   .display {
     display: none;
@@ -763,6 +923,12 @@ ul.bulleted-summary > li {
 }
 
 @media print {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* @media print {
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -772,11 +938,10 @@ ul.bulleted-summary > li {
   }
   @page {
     margin: 1cm 1.4cm;
-  }
+  } 
   .item-count {
     display: none;
   }
-  .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
@@ -799,7 +964,13 @@ ul.bulleted-summary > li {
   .section > section > section {
     margin: 0 0 1em 0;
   }
+  .section > section > .work-entry > section {
+    margin: 0 0 1em 0;
+  }
   .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .section > section > .work-entry > section:last-of-type {
     margin: 0;
   }
   .stack-overflow::after {
@@ -873,4 +1044,4 @@ ul.bulleted-summary > li {
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
-}
+} */

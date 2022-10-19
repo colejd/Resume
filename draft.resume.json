@@ -1,12 +1,16 @@
 {
   "basics": {
-    "label": "Senior Developer",
+    "label": "Lead iOS Developer",
     "website": "https://jons.website",
     "phone": "207-949-4265",
     "email": "jon@jons.website",
+    "location": {
+      "city": "Boston",
+      "region": "MA"
+    },
     "other": [],
     "name": "Jonathan Cole",
-    "summary": "Multifaceted developer with a strong history of execution and innovation in a wide variety of software projects and interaction media. Can help you make your next great iOS app, or dive deep into experimental technology to make something nobody has ever seen before. Skilled with **iOS app development**, **virtual / augmented reality**, and **computer vision**. Looking for new ways to bring innovation to human-centric computing.",
+    "summary": "Multifaceted developer with a strong history of execution and innovation in a wide variety of software projects and interaction media. Can help you make your next great iOS app, or dive deep into experimental technology to make something nobody has ever seen before. Skilled with **iOS**, **augmented reality**, and **computer vision**.",
     "picture": "",
     "profiles": [
       {
@@ -26,12 +30,14 @@
       "name": "iOS Development",
       "level": "",
       "keywords": [
+        "SwiftUI",
+        "UIKit",
         "Swift",
         "Objective-C",
-        "Metal",
-        "ARKit",
+        "BLE",
+        "IoT",
+        "MetalKit",
         "SceneKit",
-        "SwiftUI",
         "watchOS"
       ]
     },
@@ -40,12 +46,10 @@
       "level": "",
       "keywords": [
         "OpenCV",
-        "ARKit",
         "Unity3D",
-        "Homebrew",
+        "ARKit",
         "Rapid Prototyping",
-        "C++",
-        "C#"
+        "Experience Design"
       ]
     },
     {
@@ -56,8 +60,8 @@
         "Objective-C",
         "Python",
         "C#",
+        "Javascript",
         "C++",
-        "Java",
         "Metal",
         "GLSL"
       ]
@@ -67,34 +71,48 @@
     {
       "company": "Rightpoint (formerly Raizlabs)",
       "website": "https://www.rightpoint.com",
-      "position": "Lead Developer (2022), Senior Developer (2020), Developer (2018)",
+      "positions": [
+        {
+          "title": "Lead iOS Developer",
+          "secondaryText": "(promoted in 2022)"
+        },
+        {
+          "title": "Senior iOS Developer",
+          "secondaryText": "(promoted in 2020)"
+        },
+        {
+          "title": "Software iOS Developer",
+          "secondaryText": "(started in 2018)"
+        }
+      ],
       "location": {
         "city": "Boston",
         "region": "MA"
       },
+      "dateFormat": "YYYY",
       "startDate": "2018-01",
       "bulletedSummary": {
-        "text": "Responsible for architecture and implementation on large, public-facing projects that:",
+        "text": "Built UIKit and SwiftUI iOS apps serving tens of thousands of users in a fast-paced agency environment. Responsible for architecture and implementation in teams large and small, on wide-ranging projects that:",
         "items": [
           {
-            "emoji": "🏬",
-            "text": "Help store owners manage their shelves with computer vision"
-          },
-          {
-            "emoji": "🤖",
-            "text": "Pilot large robots"
-          },
-          {
-            "emoji": "🏥",
-            "text": "Raise money for cancer research"
+            "emoji": "🐬",
+            "text": "Reimagine the in-park experience for SeaWorld’s visitors"
           },
           {
             "emoji": "💡",
-            "text": "Power the smart lighting in your home"
+            "text": "Power the smart lighting in your home with BLE and WiFi"
+          },
+          {
+            "emoji": "🤖",
+            "text": "Pilot Boston Dynamics’ Spot robot dog"
+          },
+          {
+            "emoji": "🏬",
+            "text": "Help store owners manage their shelves with OpenCV image analysis"
           },
           {
             "emoji": "🚏",
-            "text": "Help visually impaired people find bus stops with Bluetooth ranging"
+            "text": "Guide visually impaired people to bus stops with Bluetooth ranging"
           },
           {
             "emoji": "🗺️",
@@ -103,35 +121,37 @@
         ]
       },
       "highlights": [
+        "Worked the entire stack, spanning architecture, persistence, API integration, framework development, and continuous integration",
+        "Responsible for investigating feature feasibility and communicating scope to deliver timely, well-built code",
         "Go-to for difficult experimental / trailblazing projects requiring an investigative approach",
         "Pinch hitter and frequent consultant for computer vision and augmented reality projects",
         "Worked extensively with Bluetooth, BLE, and Internet of Things devices"
       ]
     },
     {
-      "company": "the Virtual Environment and Multimodal Interaction Laboratory",
+      "company": "The Virtual Environment and Multimodal Interaction Laboratory",
       "website": "https://umaine.edu/vemi",
       "position": "VR / AR Engineer",
       "location": {
         "city": "Orono",
         "region": "ME"
       },
+      "dateFormat": "YYYY",
       "startDate": "2011-09",
       "endDate": "2018-01",
-      "summary": "Worked in close collaboration with researchers to develop and prototype several VR simulations using Unity3D; responsible for code and design in solo and team projects.",
+      "summary": "Innovated at the bleeding edge of VR and AR.",
       "highlights": [
-        "Provided leadership in lab environment to push into new territories with self-directed and wide-ranging projects, from the development of a custom-built wearable AR platform to the usage of VR to prototype AR techniques for enhancing human spatial perception",
-        "Mentored for more than 30 students in programming and design",
+        "Developed several VR simulations using Unity3D in close collaboration with researchers",
+        "Pushed the lab into new territories with wide-ranging projects, from the development of a custom-built wearable AR platform to the development of a fully immersive driving simulator to study eye disease in a new way",
+        "Mentored more than 30 students in programming and interactive design",
         "Integrated VR technologies with Unity3D before official support, often involving hardware hacking or creating native plugins",
-        "Developed VR experiences for multiple human interface platforms, including the HTC Vive, Oculus Rift, Leap Motion, Microsoft Kinect, andoptical marker tracking systems by Phasespace and WorldViz",
-        "Created a full-stack implementation of the W3C Web Annotation Model for Dartmouth’s [Semantic Annotation Tool](http://mediaecology.dartmouth.edu/sat/) as part of the [Media Ecology Project](https://film-media.dartmouth.edu/tags/media-ecology-project)",
-        "Created native and Unity3D-based iOS apps for AR and data visualization contexts"
+        "Created a full-stack web app implementation of the W3C Web Annotation Model for Dartmouth’s [Semantic Annotation Tool](http://mediaecology.dartmouth.edu/sat/) as part of the [Media Ecology Project](https://film-media.dartmouth.edu/tags/media-ecology-project)"
       ]
     },
     {
-      "company": "the Maine Discovery Museum",
+      "company": "Maine Discovery Museum",
       "website": "https://www.mainediscoverymuseum.org/",
-      "position": "Experience Designer (Contract)",
+      "position": "Experience Designer",
       "location": {
         "city": "Bangor",
         "region": "ME"
@@ -139,10 +159,10 @@
       "dateFormat": "YYYY",
       "startDate": "2016",
       "endDate": "2017",
-      "summary": "Worked in collaboration with the museum to create interactive exhibits for children.",
+      "summary": "Worked in collaboration with the museum to create interactive, software-driven exhibits for children.",
       "highlights": [
-        "*Sea What Grows*: Created an iOS-based kiosk as part of a wider aquaculture exhibit to teach children about the ocean",
-        "*The X-Ray Hand*: Developed an interactive exhibit that uses augmented reality to show a live x-ray visualization of the bones in a visitor’s hand"
+        "*The X-Ray Hand*: Developed an interactive exhibit that uses Unity and augmented reality via Leap Motion to show a live x-ray visualization of the bones in a visitor’s hand",
+        "*Sea What Grows*: Created an iOS-based kiosk as part of a wider aquaculture exhibit to teach children about the ocean"
       ]
     }
   ],
@@ -151,13 +171,14 @@
       "name": "Liquid Math",
       "category": "App",
       "url": "https://apps.apple.com/us/app/liquid-math/id1331320224",
+      "urlLabel": "(App Store)",
       "role": "Creator",
       "summary": "Conceived, designed, an implemented an interactive, Metal-powered Reaction-Diffusion simulator for iOS and macOS.",
       "description": "",
       "keywords": [
         "iOS",
         "macOS",
-        "Swift",
+        "SwiftUI",
         "Objective-C",
         "Metal",
         "GPGPU",
@@ -168,15 +189,17 @@
       "name": "Kino",
       "category": "FOSS",
       "url": "https://github.com/colejd/Kino",
+      "urlLabel": "(GitHub)",
       "repo": "https://github.com/colejd/Kino",
       "role": "Creator",
-      "summary": "Master's thesis. Created a custom AR headset and accompanying software to empower researchers to rapidly design computer vision experiments for wearable AR headsets without needing to worry about threading, camera synchronization, or OS details. An example plugin was developed for real-time object recognition via machine learning.",
+      "summary": "Master’s thesis. Created a custom AR headset and accompanying software empowering researchers to rapidly design computer vision experiments for wearable AR headsets. An example plugin was developed for real-time object recognition using machine learning.",
       "description": "",
       "keywords": [
         "OpenCV",
         "Augmented Reality",
         "C++",
-        "Homebrew",
+        "Fabrication",
+        "3D Printing",
         "Research"
       ]
     },
@@ -184,14 +207,15 @@
       "name": "Semantic Annotation Tool",
       "category": "FOSS",
       "url": "https://mediaecology.dartmouth.edu/sat/",
+      "urlLabel": "(GitHub)",
       "repo": "https://github.com/colejd/Waldorf",
       "role": "Creator",
-      "summary": "Created the frontend and co-created the backend implementations of the W3C Web Annotation Model for Dartmouth’s Media Ecology Project. Waldorf (the frontend) comprises an embeddable video player which allows users to create and edit rich annotations for web videos, while Statler (the backend) is a RESTful Rails backend that manages these annotations. The purpose of this system was to provide researchers with an interface for automatic tagging of videos via computer vision techniques.",
+      "summary": "Created the frontend and co-created the backend of a full-stack web app for Dartmouth’s Media Ecology Project. The frontend is an embeddable video player which allows users to create and edit rich annotations for web videos, which is driven by a RESTful Rails backend that manages these annotations.",
       "description": "",
       "keywords": [
+        "Javascript",
         "Rails",
         "Ruby",
-        "Javascript",
         "REST",
         "Frontend",
         "Backend"
@@ -203,18 +227,14 @@
       "institution": "the University of Maine",
       "area": "Computer Science",
       "studyType": "Bachelor of Science",
-      "courses": [
-        "Object-Oriented Programming", "Algorithms", "Data Structures", "Operating Systems", "Discrete Math", "Agile/Scrum"
-      ],
+      "courses": [],
       "endDate": "2015-05"
     },
     {
       "institution": "the University of Maine",
       "area": "Spatial Information Science and Engineering",
       "studyType": "Master of Science",
-      "courses": [
-        "R", "Prolog", "Spatial Analysis", "Spatial Database Systems", "Human Computer Interaction", "Information Systems Law", "Real-Time Sensor Data Streams"
-      ],
+      "courses": [],
       "endDate": "2017-12"
     }
   ]

@@ -9,12 +9,14 @@ const { dateHelpers } = require(join(HELPERS, 'date-helpers.js'));
 const { paragraphSplit } = require(join(HELPERS, 'paragraph-split.js'));
 const { toLowerCase } = require(join(HELPERS, 'to-lower-case.js'));
 const { spaceToDash } = require(join(HELPERS, 'space-to-dash.js'));
+const { linkFormat } = require(join(HELPERS, 'link-format.js'));
 
 const { MY, Y, DMY, smartDate } = dateHelpers;
 
 Handlebars.registerHelper('birthDate', birthDate);
 Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
+Handlebars.registerHelper('linkFormat', linkFormat);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('MY', MY);
 Handlebars.registerHelper('Y', Y);
