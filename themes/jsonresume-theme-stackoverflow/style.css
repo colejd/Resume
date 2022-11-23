@@ -926,6 +926,23 @@ ul.bulleted-summary > li {
   .mobile-only {
     display: none;
   }
+
+  .bulleted-summary-emoji {
+    line-height: 0.8;
+  }
+
+  /* Remove all bottom margin from last element of last section */
+  #resume > section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #resume > section:last-of-type > section > section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #resume > section:last-of-type > section > section:last-of-type > header {
+    margin-bottom: 0;
+  }
 }
 
 /* @media print {
