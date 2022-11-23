@@ -10,7 +10,7 @@
     },
     "other": [],
     "name": "Jonathan Cole",
-    "summary": "Multifaceted developer with a strong history of execution and innovation in a wide variety of software projects and interaction media. Can help you make your next great iOS app, or dive deep into experimental technology to make something nobody has ever seen before. Skilled with **iOS**, **augmented reality**, and **computer vision**.",
+    "summary": "Multifaceted developer with a strong history of execution and innovation in a wide variety of software projects and interaction media. Can help you make your next great iOS app, or dive deep into experimental technology to make something nobody has ever seen before. Skilled with **iOS**, **virtual reality**, **augmented reality**, and **computer vision**.",
     "picture": "",
     "profiles": [
       {
@@ -45,9 +45,9 @@
       "name": "AR / VR",
       "level": "",
       "keywords": [
-        "OpenCV",
-        "Unity3D",
+        "Unity",
         "ARKit",
+        "OpenCV",
         "Rapid Prototyping",
         "Experience Design"
       ]
@@ -58,8 +58,8 @@
       "keywords": [
         "Swift",
         "Objective-C",
-        "Python",
         "C#",
+        "Python",
         "Javascript",
         "C++",
         "Metal",
@@ -141,10 +141,10 @@
       "endDate": "2018-01",
       "summary": "Innovated at the bleeding edge of VR and AR.",
       "highlights": [
-        "Developed several VR simulations using Unity3D in close collaboration with researchers",
-        "Pushed the lab into new territories with wide-ranging projects, from the development of a custom-built wearable AR platform to the development of a fully immersive driving simulator to study eye disease in a new way",
+        "Developed several VR simulations using Unity in close collaboration with researchers",
+        "Pushed the lab into new territories with wide-ranging projects, from the development of a custom-built wearable AR platform to the development of a fully immersive driving simulator for studying eye disease in a new way",
         "Mentored more than 30 students in programming and interactive design",
-        "Integrated VR technologies with Unity3D before official support, often involving hardware hacking or creating native plugins",
+        "Integrated VR technologies with Unity before official support, often involving hardware hacking or creating native plugins",
         "Created a full-stack web app implementation of the W3C Web Annotation Model for Dartmouth’s [Semantic Annotation Tool](http://mediaecology.dartmouth.edu/sat/) as part of the [Media Ecology Project](https://film-media.dartmouth.edu/tags/media-ecology-project)"
       ]
     },
