@@ -927,10 +927,6 @@ ul.bulleted-summary > li {
     display: none;
   }
 
-  .bulleted-summary-emoji {
-    line-height: 0.8;
-  }
-
   /* Remove all bottom margin from last element of last section */
   #resume > section:last-of-type {
     margin-bottom: 0;
